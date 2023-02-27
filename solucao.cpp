@@ -2,7 +2,6 @@
 // Pedro Gabriel Camargo Calisto - 201920337
 // Tulio Oliveira Cruz - 202020094
 
-
 using namespace std;
 
 class Solucao{
@@ -80,7 +79,7 @@ public:
                 tempo_veiculo = max(tempo_veiculo, this->instancia->getGrafo()->getVertice(this->pedidosAtendidos[veiculo][j].second).getJanelaTempo().first);
                 tempo_veiculo += this->instancia->getGrafo()->getVertice(this->pedidosAtendidos[veiculo][j].second).getDuracaoServico();
                 localizacao_atual = this->pedidosAtendidos[veiculo][j].second;
-                capacidade_veiculo += this->instancia->getGrafo()->getVertice(this->pedidosAtendidos[veiculo][j].first).getDemanda();
+                capacidade_veiculo = this->instancia->getGrafo()->getVertice(this->pedidosAtendidos[veiculo][j].first).getDemanda();
                 if(capacidade_veiculo > this->instancia->getCapacidade()){
                     return false;
                 }

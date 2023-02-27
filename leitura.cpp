@@ -61,9 +61,7 @@ Instancia LerArquivo(string caminho){
         vertices.push_back(aux);
         if(i > 0){
             if(u == 0){
-                pedidos.push_back(make_pair(v, i));
-            }else{
-                pedidos.push_back(make_pair(i, u));
+                pedidos.push_back(make_pair(i, v));
             }
         }
     }
